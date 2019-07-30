@@ -1,30 +1,18 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
-import logo from './logo.svg';
+import { hot } from 'react-hot-loader';
 import './App.scss';
+import Sample from './sample';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-      <Button variant="contained" color="primary">
-        Default
-      </Button>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="App-header" >
+      <Sample />
       </header>
     </div>
   );
 }
 
-export default App;
+export default hot(module) (App);
+
+
